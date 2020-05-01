@@ -106,7 +106,7 @@
 					    echo "<td>" . $row['fouls'] . "</td>";
 					    echo "</tr>";
 				    }
-					echo "</table>"
+					echo "</table>";
 				} else {
 				    echo "0 results";
 				}
