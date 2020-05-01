@@ -30,9 +30,9 @@
 		<!--Prompt user to pick a year-->
 		<div class = "seasonPick">
 			<h2>Men's Basketball Cumulative Statistics</h2>
-			<form action = "./stats.php" id = "statForm" name = "statForm">
+			<form action = "#" method = "post" id = "statForm" name = "statForm">
 				<label for = "season">Pick a year:</label>
-				<select id ="seasons">
+				<select id ="seasons" name = "season">
 					<option value = "2019-20">2019-20</option>
 					<option value = "2018-19">2018-19</option>
 					<option value = "2017-18">2017-18</option>
@@ -55,7 +55,7 @@
 				$username = "root";
 				$password = "";
 				$dbname = "project";
-				$table = $_REQUEST['statForm'] . " stats";//concatenate the user input with the word "stats" for the query
+				$table = $_POST'season' . " stats";//concatenate the user input with the word "stats" for the query
 
 				// Create connection
 				$conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -63,6 +63,7 @@
 				if (!$conn) {
 				    die("Connection failed: " . mysqli_connect_error());
 				}
+
 
 				//make variable sql to hold the query
 				$sql = "SELECT jersey, player, yr, pos, ht, gp, `fg%`, `3fg%`, `ft%`, avgpts, avgreb, ast, stl, blk, fouls FROM `{$table}` ";
