@@ -55,7 +55,7 @@
 				$username = "root";
 				$password = "";
 				$dbname = "project";
-				if(isset($_POST['season'])){
+				if(isset($_POST['statForm'])){
 					$table = $_POST['submit'];// . " stats";//concatenate the user input with the word "stats" for the query
 				}
 
