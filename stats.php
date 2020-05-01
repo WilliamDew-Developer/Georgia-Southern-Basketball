@@ -32,7 +32,8 @@
 			<h2>Men's Basketball Cumulative Statistics</h2>
 			<form action = "#" method = "post" id = "statForm" name = "statForm">
 				<label for = "season">Pick a year:</label>
-				<select id ="seasons" name = "season">
+				<select id ="season" name = "season">
+					<option style = "display:none" disabled selected option >-- Pick A Season --</option>
 					<option value = "2019-20">2019-20</option>
 					<option value = "2018-19">2018-19</option>
 					<option value = "2017-18">2017-18</option>
@@ -56,7 +57,7 @@
 				$password = "";
 				$dbname = "project";
 				if(isset($_POST['statForm'])){
-					$table = $_POST['submit'];// . " stats";//concatenate the user input with the word "stats" for the query
+					$table = $_POST['season'];// . " stats";//concatenate the user input with the word "stats" for the query
 				}
 
 				// Create connection
