@@ -89,7 +89,7 @@ select{
 }
 
 /*******************************************
-***********ROSTER/COACHES PAGE Design Code**********
+***ROSTER/COACHES PAGE Design Code**********
 *******************************************/
 table{
 	color: navy;
@@ -105,7 +105,7 @@ td{
 
 td img{
 	height: 150px;
-	width: 125px;
+	width: 100px;
 	border-radius: 50%;
 }
 	

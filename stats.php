@@ -30,7 +30,7 @@
 		<!--Prompt user to pick a year-->
 		<div class = "seasonPick">
 			<h2>Men's Basketball Cumulative Statistics</h2>
-			<form action = "./stat.js" id = "statForm">
+			<form action = "./stats.php" id = "statForm" name = "statForm">
 				<label for = "season">Pick a year:</label>
 				<select id ="seasons">
 					<option value = "2019-20">2019-20</option>
@@ -49,12 +49,13 @@
 		</div>
 		
 		<!--Content Section for statistics tables-->
-		<div id = "content">
+		<div id = "content" class = "center">
 			<?php
 				$servername = "localhost";
 				$username = "root";
 				$password = "";
 				$dbname = "project";
+				$table = $_REQUEST['statForm'] . " stats";//concatenate the user input with the word "stats" for the query
 
 				// Create connection
 				$conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -63,8 +64,9 @@
 				    die("Connection failed: " . mysqli_connect_error());
 				}
 
-				$sql = "SELECT jersey, player, yr, pos, ht, gp, `fg%`, `3fg%`, `ft%`, avgpts, avgreb, ast, stl, blk, fouls FROM `2019-20 stats` ";
-				$result = mysqli_query($conn, $sql);
+				//make variable sql to hold the query
+				$sql = "SELECT jersey, player, yr, pos, ht, gp, `fg%`, `3fg%`, `ft%`, avgpts, avgreb, ast, stl, blk, fouls FROM `{$table}` ";
+				$result = mysqli_query($conn, $sql);//result of query
 
 				if (mysqli_num_rows($result) > 0) {
 					echo 
