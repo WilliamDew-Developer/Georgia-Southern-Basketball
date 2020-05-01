@@ -55,7 +55,7 @@
 				$username = "root";
 				$password = "";
 				$dbname = "project";
-				$table = $_POST['season'];// . " stats";//concatenate the user input with the word "stats" for the query
+				$table = $_POST['submit'];// . " stats";//concatenate the user input with the word "stats" for the query
 
 				// Create connection
 				$conn = mysqli_connect($servername, $username, $password, $dbname);
