@@ -56,9 +56,7 @@
 				$username = "root";
 				$password = "";
 				$dbname = "project";
-				if(isset($_POST['submit'])){
-					$table = $_POST['statForm'];// . " stats";//concatenate the user input with the word "stats" for the query
-				}
+				
 
 				// Create connection
 				$conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -66,7 +64,10 @@
 				if (!$conn) {
 				    die("Connection failed: " . mysqli_connect_error());
 				}
-
+
+				if(isset($_POST['submit'])){
+					$table = $_POST['statForm'];// . " stats";//concatenate the user input with the word "stats" for the query
+				}
 
 				//make variable sql to hold the query
 				$sql = "SELECT jersey, player, yr, pos, ht, gp, `fg%`, `3fg%`, `ft%`, avgpts, avgreb, ast, stl, blk, fouls FROM `{$table}` ";
