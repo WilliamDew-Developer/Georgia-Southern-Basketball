@@ -45,7 +45,7 @@
 					<option value = "2011-12">2011-12</option>
 					<option value = "2010-11">2010-11</option>
 				</select>
-				<input type = "submit" value = "Submit">
+				<input type = "submit" value = "Submit" name = "submit">
 			</form>
 		</div>
 		
@@ -56,8 +56,8 @@
 				$username = "root";
 				$password = "";
 				$dbname = "project";
-				if(isset($_POST['statForm'])){
-					$table = $_POST['season'];// . " stats";//concatenate the user input with the word "stats" for the query
+				if(isset($_POST['submit'])){
+					$table = $_POST['statForm'];// . " stats";//concatenate the user input with the word "stats" for the query
 				}
 
 				// Create connection
