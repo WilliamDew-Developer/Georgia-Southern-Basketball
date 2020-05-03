@@ -89,18 +89,26 @@ select{
 }
 
 /*******************************************
-***ROSTER/COACHES PAGE Design Code**********
+***Tables Design Code**********
 *******************************************/
 table{
 	color: navy;
+}
+
+.table{
+	box-shadow: 5px 10px;
 }
 
 th{
 	background-color: goldenrod;
 }
 
-td{
-	background-color: #e6e6e6;
+tr:nth-child(odd){
+  background-color: #e6e6e6;
+}
+
+tr:nth-child(even){
+	background-color:#f2f2f2;
 }
 
 td img{
