@@ -95,10 +95,6 @@ table{
 	color: navy;
 }
 
-.table{
-	box-shadow: 5px 10px silver;
-}
-
 th{
 	background-color: goldenrod;
 }
@@ -122,6 +118,9 @@ th, td{
 	padding: 10px
 }
 	
+.table{
+	box-shadow: 5px 10px;
+}
 table, th, td{
 	border: 1px solid navy;
 	border-collapse: collapse;
