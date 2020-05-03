@@ -67,6 +67,31 @@ body{
 
 /*End GRID LAYOUT setup*/
 
+/*Hail Southern Button Design*/
+.hailsouthern{
+	background-color: darkblue;
+	color: white;
+	border: 3px solid white;
+	margin-top: 10px;
+	padding: 5px 10px;
+	font-size: 15px;
+	border-radius: 15px;
+	transition: .3s;
+	box-shadow: 0 9px #999;
+}
+
+.hailsouthern:hover{
+	background-color: navy;
+	border: 3px solid gold;
+	color:  gold;
+	opacity: 1;
+}
+
+.hailsouthern:active{
+	box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 /*******************************************
 *******STATISTICS PAGE Design Code**********
 *******************************************/
@@ -89,7 +114,7 @@ select{
 }
 
 /*******************************************
-***Tables Design Code**********
+*************Tables Design Code*************
 *******************************************/
 table{
 	color: navy;
@@ -137,7 +162,7 @@ table, th, td{
   }
   
   /* Style inputs */
-  input[type=text], select, textarea {
+  input[type=text], textarea {
 	width: 100%;
 	padding: 12px;
 	border: 1px solid #ccc;
