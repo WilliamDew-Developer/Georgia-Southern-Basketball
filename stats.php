@@ -72,7 +72,7 @@
 
 					if (mysqli_num_rows($result) > 0) {
 						echo 
-						"<table>
+						"<table class = \"table\">
 						<tr>
 							<th>Jersey</th>
 							<th>Player</th>
