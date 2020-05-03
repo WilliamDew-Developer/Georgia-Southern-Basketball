@@ -96,7 +96,7 @@ table{
 }
 
 .table{
-	box-shadow: 5px 10px;
+	box-shadow: 5px 10px black;
 }
 
 th{
